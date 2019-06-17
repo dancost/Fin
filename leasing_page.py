@@ -19,11 +19,11 @@ class LeasingPage(BasePage):
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).send_keys(ammount)
 
     def check_objekttyp(self):
-        return self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).is_displayed()
+        return self._driver.find_element_by_id(LeasingPage.OBJEKTTYP).is_displayed()
 
     def set_objekttyp(self):
-        self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).click()
-        self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP_CATEGORY).click()
+        self._driver.find_element_by_id(LeasingPage.OBJEKTTYP).click()
+        self._driver.find_element_by_id(LeasingPage.OBJEKTTYP_CATEGORY).click()
 
     def check_unterkategorie(self):
         pass
