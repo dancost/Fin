@@ -1,5 +1,5 @@
 from base_page import BasePage
-
+# from selenium.webdriver.support.select import Select
 
 class LeasingPage(BasePage):
 
@@ -15,12 +15,12 @@ class LeasingPage(BasePage):
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).click()
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).send_keys(ammount)
 
-
     def check_objekttyp(self):
         return self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).is_displayed()
 
     def set_objekttyp(self, typ):
-        self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).click()
+        drop_down =Select(self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP))
+        drop_down.select_by_value(typ)
 
     def check_unterkategorie(self):
         pass

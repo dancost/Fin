@@ -1,7 +1,7 @@
 from product_page import ProductPage
 from leasing_page import LeasingPage
 from test_template import TestTemplate
-
+import time
 
 class TestLeasing(TestTemplate):
 
@@ -15,3 +15,5 @@ class TestLeasing(TestTemplate):
 
         main_page.select_leasing()
         leasing_page.set_kaufprice(100)
+        time.sleep(10)
+        leasing_page.set_objekttyp('IT & Büro')
