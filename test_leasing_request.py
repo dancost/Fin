@@ -16,4 +16,6 @@ class TestLeasing(TestTemplate):
         main_page.select_leasing()
         leasing_page.set_kaufprice(100)
         leasing_page.set_objekttyp()
+        leasing_page.set_unterkategorie()
+        leasing_page.set_laufzeit()
         time.sleep(10)
