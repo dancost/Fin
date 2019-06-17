@@ -4,6 +4,7 @@ import os
 
 chromedriver = os.environ.get("chromedriver")
 
+
 class TestTemplate(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
