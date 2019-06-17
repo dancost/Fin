@@ -13,4 +13,4 @@ class TestLeasing(TestTemplate):
         leasing_page = LeasingPage(self.driver)
 
         main_page.select_leasing()
-        leasing_page.set_kaufprice()
+        leasing_page.set_kaufprice(100)
