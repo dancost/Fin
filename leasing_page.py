@@ -19,7 +19,7 @@ class LeasingPage(BasePage):
     def check_objekttyp(self):
         return self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).is_displayed()
 
-    def set_objekttyp(self, type):
+    def set_objekttyp(self, typ):
         self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).click()
 
     def check_unterkategorie(self):
