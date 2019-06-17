@@ -5,7 +5,7 @@ class LeasingPage(BasePage):
 
     KAUFPREIS = '//input[@type="text"]'
     OBJEKTTYP = '//*[@id="select-assetCategory"]'
-    OBJEKTTYP_CATEGORY = '//li[text()="IT & Büro"]'
+    OBJEKTTYP_CATEGORY = '//*[@id="menu-assetCategory"]/div[2]/ul/li[6]'
     UNTERKATEGORIE = '//*[@id="select-assetType"]'
     LAUFZEIT = '//*[@id="select-term"]'
 
