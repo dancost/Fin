@@ -16,4 +16,4 @@ class TestLeasing(TestTemplate):
         main_page.select_leasing()
         leasing_page.set_kaufprice(100)
         time.sleep(10)
-        leasing_page.set_objekttyp('IT & Büro')
+        leasing_page.set_objekttyp()
