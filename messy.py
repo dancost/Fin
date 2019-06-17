@@ -2,7 +2,7 @@ from selenium import webdriver
 
 
 # Create chrome instance
-#driver = webdriver.Chrome(executable_path=r"/usr/bin/chromedriver")
+driver = webdriver.Chrome(executable_path=r"/usr/bin/chromedriver")
 driver.get("https://en.wikipedia.org/wiki/Main_Page")
 driver.find_element_by_id("pt-createaccount").click()
 driver.find_element_by_id("pt-login").click()
