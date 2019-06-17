@@ -1,10 +1,11 @@
 from base_page import BasePage
-# from selenium.webdriver.support.select import Select
+
 
 class LeasingPage(BasePage):
 
     KAUFPREIS = '//input[@type="text"]'
     OBJEKTTYP = '//*[@id="select-assetCategory"]'
+    OBJEKTTYP_CATEGORY = '//li[text()="IT & Büro"]'
     UNTERKATEGORIE = '//*[@id="select-assetType"]'
     LAUFZEIT = '//*[@id="select-term"]'
 
@@ -18,14 +19,14 @@ class LeasingPage(BasePage):
     def check_objekttyp(self):
         return self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).is_displayed()
 
-    def set_objekttyp(self, typ):
-        drop_down =Select(self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP))
-        drop_down.select_by_value(typ)
+    def set_objekttyp(self):
+        self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).click()
+        self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP_CATEGORY).click()
 
     def check_unterkategorie(self):
         pass
 
-    def set_unterkategorie(self, category):
+    def set_unterkategorie(self, u_category):
         pass
 
     def check_laufzeit(self):
