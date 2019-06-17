@@ -11,7 +11,7 @@ class LeasingPage(BasePage):
     def check_kaufpreis(self):
         return self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).is_displayed
 
-    def set_kaufprice(self, ammount: int):
+    def set_kaufprice(self, ammount):
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).click()
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).send_keys(ammount)
 
