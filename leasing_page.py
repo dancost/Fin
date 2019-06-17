@@ -4,7 +4,7 @@ from base_page import BasePage
 class LeasingPage(BasePage):
 
     KAUFPREIS = '//input[@type="text"]'
-    OBJEKTTYP = '//input[@name="assetCategory"]'
+    OBJEKTTYP = '//input[@placeholder="Objekttyp"]/parent::*'
     OBJEKTTYP_CATEGORY = '//li[text()="IT & Büro"]'
     UNTERKATEGORIE = '//*[@id="select-assetType"]'
     LAUFZEIT = '//*[@id="select-term"]'
