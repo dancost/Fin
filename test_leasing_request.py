@@ -5,9 +5,9 @@ from test_template import TestTemplate
 
 class TestLeasing(TestTemplate):
 
-    def test_leasing_category(self):
-        main_page = ProductPage(self.driver)
-        assert main_page.check_category_leasing()
+    # def test_leasing_category(self):
+    #     main_page = ProductPage(self.driver)
+    #     assert main_page.check_category_leasing()
 
     def test_leasing_request(self):
         main_page = ProductPage(self.driver)

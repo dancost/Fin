@@ -1,5 +1,5 @@
 from base_page import BasePage
-
+import time
 
 class LeasingPage(BasePage):
 
@@ -9,17 +9,20 @@ class LeasingPage(BasePage):
     LAUFZEIT = '//*[@id="select-term"]'
 
     def check_kaufpreis(self):
-        return self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).is_displayed
+        return self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).is_displayed()
 
     def set_kaufprice(self, ammount):
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).click()
+        time.sleep(10)
         self._driver.find_element_by_xpath(LeasingPage.KAUFPREIS).send_keys(ammount)
+        time.sleep(10)
 
     def check_objekttyp(self):
-        pass
+        return self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).is_displayed()
 
     def set_objekttyp(self, type):
-        pass
+        self._driver.find_element_by_xpath(LeasingPage.OBJEKTTYP).click()
+        time.sleep(10)
 
     def check_unterkategorie(self):
         pass
