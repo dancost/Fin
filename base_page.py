@@ -1,4 +1,6 @@
-
+# Base class for all pages
+# All Page instances are going to be derived from this
+# Holds Selenium specific logic
 
 class BasePage():
     def __init__(self, driver):

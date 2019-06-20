@@ -1,10 +1,8 @@
+# BaseClass for all test cases
+# HOlds common code for all test cases - e.g. Setup and Teardown
+
 import unittest
 from selenium import webdriver
-
-import os
-
-
-# chromedriver = os.environ.get("chromedriver")
 
 
 class TestTemplate(unittest.TestCase):
