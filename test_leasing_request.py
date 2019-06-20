@@ -1,11 +1,12 @@
 from product_page import ProductPage
 from leasing_page import LeasingPage
 from test_template import TestTemplate
-
+import time
 
 # A test case (scenario)_
 
 # TODO: Add validation step after actions
+
 
 class TestLeasing(TestTemplate):
 
@@ -26,6 +27,8 @@ class TestLeasing(TestTemplate):
         leasing_page.click_continue()
         leasing_page.input_company_name("FinCompare")
         leasing_page.select_company("FinCompare GmbH")
+        # show page before quit()
+        time.sleep(10)
 
 
 
